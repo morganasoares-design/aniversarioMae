@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Aniversário, Mãe Andreia! ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+  color: #49273a;
+  background: #fff0f5;
+}
+
+/* CONTROLE DA GALERIA SEM JAVASCRIPT */
+#abrir {
+  position: absolute;
+  left: -9999px;
+}
+
+.capa {
+  min-height: 100vh;
+  padding: 30px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(35, 20, 30, 0.55), rgba(35, 20, 30, 0.65)),
+    url("praia.jpg") center center / cover no-repeat;
+}
+
+.cartao {
+  width: 100%;
+  max-width: 850px;
+  padding: 30px 22px;
+  color: white;
+  background: rgba(55, 35, 48, 0.65);
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 25px;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 64px);
+  margin-top: 0;
+}
+
+.cartao p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.botao {
+  display: inline-block;
+  margin: 15px 5px;
+  padding: 15px 25px;
+  border: 2px solid white;
+  border-radius: 40px;
+  background: #e987b3;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: #c94f88;
+}
+
+/* GALERIA */
+#galeria {
+  display: none;
+  padding: 35px 16px;
+  background: #fff0f5;
+}
+
+#abrir:checked ~ #galeria {
+  display: block;
+}
+
+h2 {
+  color: #b13d75;
+  font-size: clamp(28px, 5vw, 38px);
+}
+
+.introducao {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.fotos {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.foto {
+  padding: 15px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(139, 69, 96, 0.12);
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.foto h3 {
+  color: #b13d75;
+  font-size: 22px;
+}
+
+.foto details {
+  margin-top: 15px;
+}
+
+.foto summary {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 25px;
+  background: #d95f98;
+  color: white;
+  cursor: pointer;
+  list-style: none;
+}
+
+.foto summary::-webkit-details-marker {
+  display: none;
+}
+
+.mensagem {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff0f5;
+  border-radius: 12px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.carta {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border: 2px solid #f1bfd5;
+  border-radius: 20px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.carta h2 {
+  text-align: center;
+}
+
+.assinatura {
+  text-align: right;
+  color: #b13d75;
+  font-weight: bold;
+}
+
+.rodape {
+  padding: 25px 15px;
+  background: #f9dce9;
+  color: #873458;
+}
+
+@media (max-width: 500px) {
+  .cartao {
+    padding: 25px 16px;
+  }
+
+  .foto img {
+    height: 250px;
+  }
+
+  .carta {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MARCAÇÃO QUE ABRE A GALERIA -->
+<input type="checkbox" id="abrir">
+
+<!-- CAPA -->
+<section class="capa">
+  <div class="cartao">
+
+    <h1>Feliz Aniversário,<br>mãe Andreia! ❤️</h1>
+
+    <p>
+      Mesmo de longe, sinto sua falta todos os dias.
+      Guardo em meu coração cada momento que vivemos.
+    </p>
+
+    <p>
+      Você é minha inspiração, uma mulher batalhadora
+      que sempre lutou por nós.
+    </p>
+
+    <p>
+      Hoje eu queria estar pertinho para te dar
+      um abraço bem apertado!
+    </p>
+
+    <label for="abrir" class="botao">
+      💌 Abrir meu presente
+    </label>
+
+    <p>Feito com muito amor para você, mãe! 💗</p>
+
+  </div>
+</section>
+
+<!-- GALERIA DE FOTOS -->
+<main id="galeria">
+
+  <h2>Nossas lembranças 💕</h2>
+
+  <p class="introducao">
+    Aqui estão nossas fotos e mensagens especiais!<br>
+    Clique em cada botão para ler uma mensagem feita para você.
+  </p>
+
+  <div class="fotos">
+
+    <!-- FOTO DA PRAIA -->
+    <article class="foto">
+      <img src="praia.jpg" alt="Nossa lembrança na praia">
+
+      <h3>Nossos momentos 🌊</h3>
+
+      <details>
+        <summary>💌 Abrir mensagem</summary>
+        <div class="mensagem">
+          Oi, mãe! Estou longe, mas sinto sua falta todos os dias.
+          Guardo na memória todos os nossos momentos.
+          Queria poder estar pertinho de você e te dar um abraço
+          bem apertado. Te amo muito! ❤️
+        </div>
+      </details>
+    </article>
+
+    <!-- FOTO MOMENTO 1 -->
+    <article class="foto">
+      <img src="momento-1.jpg" alt="Uma lembrança especial">
+
+      <h3>Lembranças queridas 🥰</h3>
+
+      <details>
+        <summary>💌 Abrir mensagem</summary>
+        <div class="mensagem">
+          Mãe, cada momento que vivemos é um tesouro que levo
+          comigo. Mesmo quando estamos longe, nossas lembranças
+          aquecem meu coração e me fazem sentir você pertinho.
+          Obrigada por fazer parte da minha história! 💗
+        </div>
+      </details>
+    </article>
+
+    <!-- FOTO MOMENTO 3 -->
+    <article class="foto">
+      <img src="momento-3.jpg" alt="Um momento especial">
+
+      <h3>Minha inspiração 💖</h3>
+
+      <details>
+        <summary>💌 Abrir mensagem</summary>
+        <div class="mensagem">
+          Admiro muito você, mãe. Sempre foi uma mulher
+          batalhadora, forte e que lutou por nós.
+          Seu exemplo me inspira e me ensina a nunca desistir.
+          Tenho muito orgulho de ser sua filha!
+        </div>
+      </details>
+    </article>
+
+    <!-- FOTO DA FAMÍLIA -->
+    <article class="foto">
+      <img src="familia.jpg" alt="Nossa família">
+
+      <h3>Nosso amor é para sempre 👩‍👧</h3>
+
+      <details>
+        <summary>💌 Abrir mensagem</summary>
+        <div class="mensagem">
+          A distância não diminui o amor que sinto por você.
+          Você sempre terá um lugar especial no meu coração.
+          Desejo que seu aniversário seja lindo, cheio de saúde,
+          alegria, paz e muito amor. Feliz aniversário, mãe! 🎂❤️
+        </div>
+      </details>
+    </article>
+
+  </div>
+
+  <!-- CARTA ESPECIAL -->
+  <section class="carta">
+
+    <h2>Uma carta para você, mãe 💌</h2>
+
+    <p>Minha mãe querida, Andreia,</p>
+
+    <p>
+      Hoje é seu aniversário e eu queria muito poder estar
+      pertinho de você para te abraçar e dizer pessoalmente
+      o quanto você é importante para mim.
+    </p>
+
+    <p>
+      Mesmo de longe, sinto sua falta todos os dias.
+      Guardo na memória todos os nossos momentos e levo comigo
+      o carinho, os ensinamentos e tudo o que vivemos juntas.
+    </p>
+
+    <p>
+      Você é uma inspiração para mim. Admiro sua força,
+      sua coragem e a mulher batalhadora que sempre lutou
+      por nós. Obrigada por tudo, mãe!
+    </p>
+
+    <p>
+      Desejo que este novo ciclo traga muita saúde, paz,
+      felicidade, amor e sonhos realizados. Que a vida te
+      presenteie com muitos motivos para sorrir.
+    </p>
+
+    <p>
+      Queria poder te dar hoje aquele abraço bem apertado
+      e ficar pertinho de você. Enquanto isso, deixo aqui
+      um pedacinho do meu coração.
+    </p>
+
+    <p>
+      Feliz aniversário, mãe Andreia! Eu te amo muito,
+      mais do que as palavras conseguem explicar.
+      Você estará sempre no meu coração. ❤️
+    </p>
+
+    <p class="assinatura">
+      Com todo o meu amor,<br>
+      sua filha! 💗
+    </p>
+
+  </section>
+
+  <label for="abrir" class="botao">
+    ❤️ Voltar para a capa
+  </label>
+
+</main>
+
+<footer class="rodape">
+  Feito com muito amor para a mãe Andreia! 🎂💗
+</footer>
+
+</body>
+</html>
